@@ -16,10 +16,11 @@ import help from "../../assets/svg/HelpIcon.svg"
 import secure from "../../assets/svg/Secure.svg"
 import DownIcon from "../../assets/svg/down.svg"
 import "react-phone-number-input/style.css";
+import {  useNavigate } from 'react-router-dom';
 const { useState, useEffect } = React;
 const Payments = () => {
   const [value, setValue] = React.useState();
-
+const navigate =useNavigate()
   return (
     <div>
             <div className="personilize-sec">
@@ -98,7 +99,7 @@ const Payments = () => {
 By continuing, you agree to our terms
             </div>
             <div className="proceed">
-              <button>Continue</button>
+              <button onClick={()=>navigate(`/order-deliver`)}>Continue</button>
             </div>
           </div>
           </div>
